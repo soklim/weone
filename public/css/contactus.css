@@ -1,0 +1,25 @@
+
+#contact{
+
+    font-family: 'Khmer OS Battambang', sans-serif;
+}
+
+#map{
+    margin-top: -30px;
+}
+
+
+#contact .row{
+    margin-bottom:30px;
+}
+
+@media (max-width: 768px) {
+    #contact iframe {
+        margin-bottom: 15px;
+    }
+
+}
+
+#contact2{
+    margin-top: 20px;
+}

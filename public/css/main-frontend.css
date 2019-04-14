@@ -1,0 +1,130 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Oswald',Helvetica,Arial,Lucida,sans-serif;
+}
+
+.nav{
+    padding: 5px;
+}
+.dropdown{
+    color: white;
+}
+.nav-link.dropdown:hover{
+    color: deepskyblue;
+}
+a.nav-link{
+    padding: 15px;
+}
+a.nav-link.dropdown:hover{
+    background-color: #f39c12;
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+.color-background{
+    background-color: #79bb2a;
+}
+.navbar{
+    padding: 0px;
+}
+.container {
+    max-width: 1100px;
+}
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+
+}
+
+@media only screen and (max-width: 374px) {
+
+
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+
+}
+.product_view .modal-dialog{max-width: 800px; width: 100%;}
+.pre-cost{text-decoration: line-through; color: #a5a5a5;}
+.space-ten{padding: 10px 0;}
+
+.modal-content{
+    width: 96%;
+}
+
+.after-header{
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.adv span{
+    display: inline-block;
+    color: black;
+    font-size: 12px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+.products img{
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+.adv{
+    display: none;
+
+}
+.promo{
+    text-align: center;
+
+}
+.other-side{
+    text-align: center;
+}
+#logo{
+    text-align: center;
+}
+    .ui-helper-hidden-accessible { display:none; }
+
+
+
+
+
+}
