@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
             'name'=>'Admin',
             'role_id'=>'1',
             'isActive'=>'1',
-            'email'=>'soklimkheng@weone.com',
+            'email'=>'soklim@weone.com',
             'password'=>bcrypt('123123')
         ]);
 
@@ -192,7 +192,7 @@ class DatabaseSeeder extends Seeder
             'static_value_first'=>'WEONE CAMBODIA',
             'static_value_second'=>'Best & New',
             'static_value_third'=>'Offer',
-            'static_value_forth'=>'Brand'
+            'static_value_forth'=>'About US'
         ]);
 
         $sys_static =SysStatic::create([

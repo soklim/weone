@@ -119,29 +119,39 @@
     }
 
 
-    .card {
-        height: 100%;
+
+
+    .fa-stack[data-count]:after{
+        position:absolute;
+        right:0%;
+        top:0%;
+        content: attr(data-count);
+        font-size:40%;
+        padding:.6em;
+        border-radius:999px;
+        line-height:.55em;
+        color: white;
+        color: #79bb2a;
+        text-align:center;
+        min-width:2em;
+        font-weight:bold;
+        background: white;
+        border-style:solid;
+    }
+    .fa-circle {
+        color:#79bb2a;
     }
 
-    .cart-item-count {
-        position: relative;
+    .red-cart {
+        color: #79bb2a; background:white;
     }
-
-    .cesta-feira__num-items{
+    fa-stack-sv {
+        left: 0;
         position: absolute;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background: #fff;
-        color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: -2px;
-        right: -12px;
-        font-size: 12px;
-        font-weight: bold;
-    }
+        text-align: center;
+        width: 100%; }
+    .fa-stack-sv {
+        font-size: 1.5em; }
 
 
 

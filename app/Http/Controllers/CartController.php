@@ -140,9 +140,12 @@ class CartController extends Controller
         $sys_FirstOffer=SysStatic::where('id',9)->get();
         $sys_SecondOffer=SysStatic::where('id',10)->get();
 
-        if ($cartItems == '') {
-            return redirect('frontend/product-lists');
+        if (Cart::count() == 0) {
+
+            return redirect('/');
         }
-        return view('frontend.checkout.checkout', compact("cartItems","sys_SecondOffer","sys_FirstOffer","sys_s","sys_logo","sys_footerLeft"));
+        else{
+            return view('frontend.checkout.checkout', compact("cartItems","sys_SecondOffer","sys_FirstOffer","sys_s","sys_logo","sys_footerLeft"));
+        }
     }
 }

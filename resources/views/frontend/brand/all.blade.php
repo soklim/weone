@@ -14,14 +14,16 @@
                     <figure class="card card-product hovereffect">
                         <a href="{!! url('product-detail/'. $innis->id.$innis->category_id.$innis->brand_id) !!}"><div class="mx-auto d-block img-wrap products"><img src="{{$innis->photo->file}}"></div></a>
                         <figcaption class="info-wrap" style="padding-bottom: 0px">
-                            <h5 class="title">{{$innis->pro_name}}</h5>
-                            <p class="desc" >{{str_limit($innis->desc,40)}}</p>
+                            <a href="{!! url('product-detail/'. $innis->id.$innis->category_id.$innis->brand_id) !!}"><h5 class="title">{{$innis->pro_name}}</h5></a>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="{!! url('product-detail/'. $innis->id.$innis->category_id.$innis->brand_id) !!}"><button class="btn btn-sm btn-primary float-right">View Detail</button></a>
                             <div class="price-wrap h5">
-                                <span class="price-new">${{$innis->prices}}</span> <del class="price-old"></del>
+                                <span class="price-new">${{$best->prices}}</span> <del class="price-old"></del>
                             </div> <!-- price-wrap.// -->
+                        </div> <!-- bottom-wrap.// -->
+                        <div class="bottom-wrap">
+                            <a href="{!! url('product-detail/'. $innis->id.$innis->category_id.$innis->brand_id) !!}"><button class="btn btn-sm btn-primary" >View Detail</button></a>
+                            <a href="{{route('cart.edit',$innis->id)}}"><button class="btn btn-sm btn-success">Add to cart</button></a>
                         </div> <!-- bottom-wrap.// -->
                     </figure>
                 </div> <!-- col // -->
@@ -44,14 +46,16 @@
                     <figure class="card card-product hovereffect">
                         <a href="{!! url('product-detail/'. $laneige->id.$laneige->category_id.$laneige->brand_id) !!}"><div class="mx-auto d-block img-wrap products"><img src="{{$laneige->photo->file}}"></div></a>
                         <figcaption class="info-wrap" style="padding-bottom: 0px">
-                            <h5 class="title">{{$laneige->pro_name}}</h5>
-                            <p class="desc" >{{str_limit($laneige->desc,40)}}</p>
+                            <a href="{!! url('product-detail/'. $laneige->id.$laneige->category_id.$laneige->brand_id) !!}"><h5 class="title">{{$laneige->pro_name}}</h5></a>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="{!! url('product-detail/'. $laneige->id.$laneige->category_id.$laneige->brand_id) !!}"><button class="btn btn-sm btn-primary float-right">View Detail</button></a>
                             <div class="price-wrap h5">
                                 <span class="price-new">${{$laneige->prices}}</span> <del class="price-old"></del>
                             </div> <!-- price-wrap.// -->
+                        </div> <!-- bottom-wrap.// -->
+                        <div class="bottom-wrap">
+                            <a href="{!! url('product-detail/'. $laneige->id.$laneige->category_id.$laneige->brand_id) !!}"><button class="btn btn-sm btn-primary" >View Detail</button></a>
+                            <a href="{{route('cart.edit',$laneige->id)}}"><button class="btn btn-sm btn-success">Add to cart</button></a>
                         </div> <!-- bottom-wrap.// -->
                     </figure>
                 </div> <!-- col // -->
@@ -72,14 +76,16 @@
                     <figure class="card card-product hovereffect">
                         <a href="{!! url('product-detail/'. $iope->id.$iope->category_id.$iope->brand_id) !!}"><div class="mx-auto d-block img-wrap products"><img src="{{$iope->photo->file}}"></div></a>
                         <figcaption class="info-wrap" style="padding-bottom: 0px">
-                            <h5 class="title">{{$iope->pro_name}}</h5>
-                            <p class="desc" >{{str_limit($iope->desc,40)}}</p>
+                            <a href="{!! url('product-detail/'. $iope->id.$iope->category_id.$iope->brand_id) !!}"><h5 class="title">{{$iope->pro_name}}</h5></a>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="{!! url('product-detail/'. $iope->id.$iope->category_id.$iope->brand_id) !!}"><button class="btn btn-sm btn-primary float-right">View Detail</button></a>
                             <div class="price-wrap h5">
                                 <span class="price-new">${{$iope->prices}}</span> <del class="price-old"></del>
                             </div> <!-- price-wrap.// -->
+                        </div> <!-- bottom-wrap.// -->
+                        <div class="bottom-wrap">
+                            <a href="{!! url('product-detail/'. $iope->id.$iope->category_id.$iope->brand_id) !!}"><button class="btn btn-sm btn-primary" >View Detail</button></a>
+                            <a href="{{route('cart.edit',$iope->id)}}"><button class="btn btn-sm btn-success">Add to cart</button></a>
                         </div> <!-- bottom-wrap.// -->
                     </figure>
                 </div> <!-- col // -->
@@ -100,14 +106,16 @@
                     <figure class="card card-product hovereffect">
                         <a href="{!! url('product-detail/'. $etude->id.$etude->category_id.$etude->brand_id) !!}"> <div class="mx-auto d-block img-wrap products"><img src="{{$etude->photo->file}}"></div></a>
                         <figcaption class="info-wrap" style="padding-bottom: 0px">
-                            <h5 class="title">{{$etude->pro_name}}</h5>
-                            <p class="desc" >{{str_limit($etude->desc,40)}}</p>
+                            <a href="{!! url('product-detail/'. $etude->id.$etude->category_id.$etude->brand_id) !!}"><h5 class="title">{{$etude->pro_name}}</h5></a>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="{!! url('product-detail/'. $etude->id.$etude->category_id.$etude->brand_id) !!}"><button class="btn btn-sm btn-primary float-right">View Detail</button></a>
                             <div class="price-wrap h5">
                                 <span class="price-new">${{$etude->prices}}</span> <del class="price-old"></del>
                             </div> <!-- price-wrap.// -->
+                        </div> <!-- bottom-wrap.// -->
+                        <div class="bottom-wrap">
+                            <a href="{!! url('product-detail/'. $etude->id.$etude->category_id.$etude->brand_id) !!}"><button class="btn btn-sm btn-primary" >View Detail</button></a>
+                            <a href="{{route('cart.edit',$etude->id)}}"><button class="btn btn-sm btn-success">Add to cart</button></a>
                         </div> <!-- bottom-wrap.// -->
                     </figure>
                 </div> <!-- col // -->
@@ -128,14 +136,16 @@
                     <figure class="card card-product hovereffect">
                         <a href="{!! url('product-detail/'. $other->id.$other->category_id.$other->brand_id) !!}"><div class="mx-auto d-block img-wrap products"><img src="{{$other->photo->file}}"></div></a>
                         <figcaption class="info-wrap" style="padding-bottom: 0px">
-                            <h5 class="title">{{$other->pro_name}}</h5>
-                            <p class="desc" >{{str_limit($other->desc,40)}}</p>
+                            <a href="{!! url('product-detail/'. $other->id.$other->category_id.$other->brand_id) !!}"><h5 class="title">{{$other->pro_name}}</h5></a>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="{!! url('product-detail/'. $other->id.$other->category_id.$other->brand_id) !!}"><button class="btn btn-sm btn-primary float-right">View Detail</button></a>
                             <div class="price-wrap h5">
                                 <span class="price-new">${{$other->prices}}</span> <del class="price-old"></del>
                             </div> <!-- price-wrap.// -->
+                        </div> <!-- bottom-wrap.// -->
+                        <div class="bottom-wrap">
+                            <a href="{!! url('product-detail/'. $other->id.$other->category_id.$other->brand_id) !!}"><button class="btn btn-sm btn-primary" >View Detail</button></a>
+                            <a href="{{route('cart.edit',$other->id)}}"><button class="btn btn-sm btn-success">Add to cart</button></a>
                         </div> <!-- bottom-wrap.// -->
                     </figure>
                 </div> <!-- col // -->

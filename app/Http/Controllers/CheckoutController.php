@@ -54,8 +54,7 @@ class CheckoutController extends Controller
 
     public function checkout()
     {
-        $data1['data'] = DB::table('tbl_category')->get();
-        return view('front.checkout.checkout',$data1);
+        return view('front.checkout.checkout');
     }
     //remove cart
     public function RemoveCart($rowid)

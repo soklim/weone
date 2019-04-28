@@ -32,7 +32,7 @@ Route::get('/about-us','AboutUsController@index');
 Route::get('/product-detail/{id}{category_id}{brand_id}', 'ProductDetailController@showproduct');
 Route::get('/shopping-cart', 'ProductDetailController@cartDetail');
 Route::get('/promotion-detail/{id}', 'OfferController@details');
-Route::get('/order-form/{id}', 'OrderController@index');
+Route::post('/order', 'OrdersController@save');
 
 Route::get('/type/{cat_id}', 'CategoryController@index');
 
@@ -51,6 +51,7 @@ Route::resource('admin/slide_shows','SlideShowController');
 
 Route::resource('admin/promotions','PromotionController');
 Route::resource('admin/subscribe','SubscribeController');
+Route::resource('admin/order','OrdersController');
 
 Route::group(['middleware'=>'IsAdmin'], function (){
 
@@ -107,5 +108,6 @@ Route::get('/view-card', 'CartController@viewCart');
 
 Route::get('/cart/update/{id}', 'CartController@update');
 
+Route::get('/success-order','OrdersController@success');
 
 

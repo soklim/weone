@@ -4,7 +4,7 @@
 @section('content1')
 <div style="height: 20px;"></div>
 <div class="container">
-    <form role="form" action="{{url('billing-address')}}" method="post">
+    <form role="form" action="{{url('order')}}" method="post">
     <div class="row">
         <div class="col-md-12">
             <h3>Your Order</h3>
@@ -49,13 +49,26 @@
         <div class="col-md-12">
             <h3>Billing Detail</h3>
             <div class="form-group">
-                <input type="text" placeholder="Enter your name" class="form-control" required>
+                <input type="text" placeholder="Enter your name" name="customer_name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <select class="form-control" name="province" required>
+                    <option value="">--select province--</option>
+                    <option value="1">Phnom Penh</option>
+                    <option value="2">Siem Reap</option>
+                    <option value="3">Battambang</option>
+                    <option value="4">Svay Rieng</option>
+                    <option value="5">Takeo</option>
+                </select>
             </div>
             <div class="form-group">
                 <textarea class="form-control" rows="5" name="address" placeholder="Enter your address"></textarea>
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Enter your phone" class="form-control" required>
+                <input type="text" placeholder="Enter your phone" class="form-control" name="phone" required>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Enter your email" name="email" class="form-control">
             </div>
         </div>
     </div>
@@ -64,11 +77,14 @@
             <h3> Payment Method</h3>
             <div class="form-group">
                 <label class="control-label">Payment Type</label>
-                <select maxlength="200" type="select" required="required" id="payment" class="form-control" name="payment_type" style="height: 30px !important;">
+                <select maxlength="200" type="select" required="required" id="payment" class="form-control" name="payment_method" style="height: 30px !important;">
                     <option value="">[--Please select--]</option>
                     <option value="aba">1. Pay By ABA Bank (000115025)</option>
                     <option value="delivery">2. Pay By Delivery</option>
                 </select>
+                <input type="hidden" name="total" value="{{ Cart::subtotal() }}">
+
+
             </div>
             <div class="form-group" >
                 <label class="control-label">Description</label>
@@ -81,7 +97,7 @@
                 {{--<input type="checkbox" name="term_and_condition" id="term_and_condition" value="" required="required"> I already agree with term and condition. We will use your order privacy to do order processing--}}
             {{--</div>--}}
             <input type="hidden" name="quantity" value="{{$cartItem->qty}}">
-            <input type="hidden" name="status_product" value="Processing">
+            <input type="hidden" name="status_product" value="Ordering">
             <input type="hidden" name="order_unit_price" value="{{ $cartItem->price}}">
             {{ csrf_field() }}
             <div class="form-group">

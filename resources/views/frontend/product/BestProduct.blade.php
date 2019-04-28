@@ -24,14 +24,17 @@
                     <figure class="card card-product hovereffect">
                         <a href="{!! url('product-detail/'. $best->id.$best->category_id.$best->brand_id) !!}"><div class="mx-auto d-block img-wrap products"><img src="{{$best->photo->file}}"></div></a>
                         <figcaption class="info-wrap" style="padding-bottom: 0px">
-                            <h5 class="title">{{$best->pro_name}}</h5>
-                            <p class="desc" >{{str_limit($best->desc,40)}}</p>
+                            <a href="{!! url('product-detail/'. $best->id.$best->category_id.$best->brand_id) !!}"><h5 class="title">{{$best->pro_name}}</h5></a>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="{!! url('product-detail/'. $best->id.$best->category_id.$best->brand_id) !!}"><button class="btn btn-sm btn-primary float-right">View Detail</button></a>
                             <div class="price-wrap h5">
                                 <span class="price-new">${{$best->prices}}</span> <del class="price-old"></del>
                             </div> <!-- price-wrap.// -->
+                        </div> <!-- bottom-wrap.// -->
+                        <div class="bottom-wrap">
+                            <a href="{!! url('product-detail/'. $best->id.$best->category_id.$best->brand_id) !!}"><button class="btn btn-sm btn-primary" >View Detail</button></a>
+                            <a href="{{route('cart.edit',$best->id)}}"><button class="btn btn-sm btn-success">Add to cart</button></a>
+
                         </div> <!-- bottom-wrap.// -->
                     </figure>
                 </div> <!-- col // -->

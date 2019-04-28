@@ -56,7 +56,7 @@
 
         <li class="nav-item">
             <a class="nav-link" href="{{route('products.index')}}">
-                <i class="fas fa-fw fa-shopping-cart"></i>
+                <i class="fab fa-product-hunt"></i>
                 <span>Product</span>
             </a>
         </li>
@@ -80,6 +80,13 @@
             <a class="nav-link" href="{{route('subscribe.index')}}">
                 <i class="fas fa-fw fa-envelope"></i>
                 <span>Email Subscribe</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('order.index')}}">
+                <i class="fas fa-fw fa-shopping-cart"></i>
+                <span>New Ordering</span>
             </a>
         </li>
 

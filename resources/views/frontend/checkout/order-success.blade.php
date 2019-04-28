@@ -1,5 +1,6 @@
-@extends('front.homepages.header')
-@section('content')
+@extends('frontend.fragement.layout')
+
+@section('content1')
     <style>
         h1{
             text-align: center;
@@ -10,8 +11,12 @@
     </style>
     <div class="container-fluid" style="height: 450px;margin-top: 40px;">
         <h1> <i class="fa fa-check-circle" style=" font-size: 100px;color: green;"></i></br>Thank you!</h1>
-        <h3>Your order was successfully!!!</h3>
+        @foreach($order as $max)
+            <h3>Your order was successful with invoice number: {{$max->order_id}}</h3>
+
+
+        @endforeach
 
     </div>
-@include('front.homepages.footer')
+
 @stop

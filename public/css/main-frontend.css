@@ -1,6 +1,4 @@
 body{
-    padding: 0px;
-    margin: 0px;
     font-family: 'Oswald',Helvetica,Arial,Lucida,sans-serif;
 }
 
@@ -91,10 +89,18 @@ a {
     display: inline-block;
     color: black;
     font-size: 12px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    /*padding-top: 30px;*/
+    /*padding-bottom: 30px;*/
 }
-
+#pc-mode{
+    padding-top: 20px;
+}
+#ads{
+    text-align: right;
+}
+.cart span{
+    font-size: 24px;
+}
 
 
 
@@ -107,10 +113,7 @@ a {
     width: auto\9;
 }
 
-.adv{
-    display: none;
 
-}
 .promo{
     text-align: center;
 
@@ -121,7 +124,26 @@ a {
 #logo{
     text-align: center;
 }
-    .ui-helper-hidden-accessible { display:none; }
+#cart{
+    text-align: right;
+}
+#ads{
+   text-align: center;
+}
+#pc-mode{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.adv span{
+    font-size: 8px;
+}
+    .adv span img{
+        width: 70%;
+    }
+    .cart span{
+        font-size: 15px;
+    }
+.ui-helper-hidden-accessible { display:none; }
 
 
 

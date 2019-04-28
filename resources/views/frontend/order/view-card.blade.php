@@ -44,6 +44,11 @@
         </div>
         <br/><br/>
         <div class="col-md-4">
+            <div class="form-group">
+                <a href="{{ url('/') }}" >
+                    <button class="btn btn-primary">Continue Shopping</button>
+                </a>
+            </div>
             <div class="list-group">
                 <a href="#" class="list-group-item">
                     <span><b>Subtotal:</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ Cart::subtotal() }} $</span>

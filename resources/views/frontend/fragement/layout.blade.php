@@ -12,35 +12,37 @@
 </head>
 <body>
     <div class="container">
-        <div class="row" id="">
-            <div class="col-md-6 col-xs-12" >
+        <div class="row" id="pc-mode">
+            <div class="col-lg-4 col-md-4 col-xs-12" >
                 @foreach($sys_logo as $logo)
-                    <div id="logo" style="padding-top: 20px;padding-bottom: 20px">
+                    <div id="logo">
                         <a href="/"><img width="80px" src="{{$logo->photo?$logo->photo->file:'https://via.placeholder.com/400x65'}} "  data-toggle="tooltip" data-placement="right" title="Weone"></a>
                     </div>
                 @endforeach
-            </div>
-            <div class="col-md-2  col-xs-5">
-                @foreach($sys_FirstOffer as $FirstOffer)
-                <a href="#" class="adv">
-                    <span class="img"><img src="{{$FirstOffer->photo->file}}"></span>
-                    <span>{{$FirstOffer->static_value_first}}<br>{{$FirstOffer->static_value_second}}</span><b class="vtc_middle"></b>
-                </a>
-                @endforeach
-            </div>
-            <div class="col-md-2  col-xs-5">
-                @foreach($sys_SecondOffer as $SecondOffer)
-                <a href="#" class="adv">
-                    <span class="img"><img src="{{$SecondOffer->photo->file}}"></span>
-                    <span>{{$SecondOffer->static_value_first}}<br>{{$SecondOffer->static_value_second}} </span><b class="vtc_middle"></b>
-                </a>
-                @endforeach
-            </div>
-            <div class="col-md-2  col-xs-5" style="padding-top: 25px">
 
-                <a class="navbar-brand fa fa-shopping-cart text-dark Active " href="{{ route('cart.index')}}" style="float: right;font-size: 14px">
-                    <i class=" fa-lg" aria-hidden="true"></i>
-                    Card <span class="badge badge-pill badge-danger" style="border: 2px solid;">{{ Cart::count() }}</span></a>
+            </div>
+            <div class="col-lg-8 col-md-8 col-xs-12" id="ads">
+
+                @foreach($sys_FirstOffer as $FirstOffer)
+                        <a href="#" class="adv col-lg-5  col-md-5">
+                            <span class="img"><img src="{{$FirstOffer->photo->file}}"></span>
+                            <span>{{$FirstOffer->static_value_first}}<br>{{$FirstOffer->static_value_second}}</span><b class="vtc_middle"></b>
+                        </a>
+                @endforeach
+
+
+                @foreach($sys_SecondOffer as $SecondOffer)
+                            <a href="#" class="adv col-lg-4  col-md-5">
+                                <span class="img"><img src="{{$SecondOffer->photo->file}}"></span>
+                                <span>{{$SecondOffer->static_value_first}}<br>{{$SecondOffer->static_value_second}} </span><b class="vtc_middle"></b>
+                            </a>
+                 @endforeach
+                    <a href="{{ route('cart.index')}}" class="cart col-lg-3 col-md-2">
+                    <span class="fa-stack fa-2x has-badge" data-count="{{ Cart::count() }}" >
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span></a>
+
             </div>
 
 
