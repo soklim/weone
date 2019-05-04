@@ -30,10 +30,10 @@
                                 <i class="fas fa-fw fa-shopping-cart"></i>
                             </div>
 
-                            <div class="mr-5"> {{$pro->count()}}  Products </div>
+                            <div class="mr-5"> {{$newOrder->count()}}  New Order </div>
 
                         </div>
-                        <a class="card-footer text-white clearfix small z-1" href="{{route('products.index')}}">
+                        <a class="card-footer text-white clearfix small z-1" href="{{route('order.index')}}">
                             <span class="float-left">View Details</span>
                             <span class="float-right">
                     <i class="fas fa-angle-right"></i>

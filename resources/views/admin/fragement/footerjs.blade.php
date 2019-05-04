@@ -20,6 +20,12 @@
     });
 
 </script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script>
+    $("#status").change(function() {
+        document.getElementById("statusID").value=this.value;
+    });
+</script>
 
 <script>
     var uploadField = document.getElementById("photo_id");

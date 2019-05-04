@@ -86,7 +86,19 @@
         <li class="nav-item">
             <a class="nav-link" href="{{route('order.index')}}">
                 <i class="fas fa-fw fa-shopping-cart"></i>
-                <span>New Ordering</span>
+                <span>All Order</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('NewOrder.index')}}">
+                <i class="fas fa-fw fa-shopping-cart"></i>
+                <span>New Order</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('CancelOrder.index')}}">
+                <i class="fas fa-fw fa-shopping-cart"></i>
+                <span>Canceled Order</span>
             </a>
         </li>
 
@@ -107,7 +119,7 @@
     <footer class="sticky-footer">
         <div class="container my-auto">
             <div class="copyright text-center my-auto">
-                <span>Copyright ©weone 2018</span>
+                <span>Copyright ©weone 2019</span>
             </div>
         </div>
     </footer>

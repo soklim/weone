@@ -66,6 +66,35 @@ class DatabaseSeeder extends Seeder
             'category_name'=>'Other'
         ]);
 
+        $OrderStatus = \App\OrderStatus::create([
+            'status_name'=>'Ordering'
+        ]);
+        $OrderStatus = \App\OrderStatus::create([
+            'status_name'=>'Accepted'
+        ]);
+        $OrderStatus = \App\OrderStatus::create([
+            'status_name'=>'On Delivery'
+        ]);
+        $OrderStatus = \App\OrderStatus::create([
+            'status_name'=>'Finished'
+        ]);
+        $OrderStatus = \App\OrderStatus::create([
+            'status_name'=>'Cancel'
+        ]);
+
+        $province = \App\Province::create([
+            'province_name'=>'Phnom Penh'
+        ]);
+        $province = \App\Province::create([
+            'province_name'=>'Kondal'
+        ]);
+        $province = \App\Province::create([
+            'province_name'=>'Battambang'
+        ]);
+        $province = \App\Province::create([
+            'province_name'=>'Siem Reap'
+        ]);
+
 
 
         $brands = Brand::create([

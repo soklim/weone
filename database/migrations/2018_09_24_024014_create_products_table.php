@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('brand_id')->unsigned()->index();
             $table->string('pro_name',255);
             $table->string('pro_code',20)->nullable();
+            $table->string('pro_status',30)->nullable();
             $table->string('desc',2500)->nullable();
             $table->double('prices',10)->nullable();
             $table->boolean('isPop',1)->default(0);

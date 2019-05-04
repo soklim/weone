@@ -21,4 +21,13 @@ class Orders extends Model
         'total'
 
     ];
+    public function orderStatus(){
+
+        return $this->belongsTo('App\OrderStatus','statuss');
+    }
+
+    public function provinces(){
+
+        return $this->belongsTo('App\Province','province');
+    }
 }

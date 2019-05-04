@@ -31,7 +31,6 @@ Route::get('/best&new-product','BestProductController@index');
 Route::get('/about-us','AboutUsController@index');
 Route::get('/product-detail/{id}{category_id}{brand_id}', 'ProductDetailController@showproduct');
 Route::get('/shopping-cart', 'ProductDetailController@cartDetail');
-Route::get('/promotion-detail/{id}', 'OfferController@details');
 Route::post('/order', 'OrdersController@save');
 
 Route::get('/type/{cat_id}', 'CategoryController@index');
@@ -52,6 +51,8 @@ Route::resource('admin/slide_shows','SlideShowController');
 Route::resource('admin/promotions','PromotionController');
 Route::resource('admin/subscribe','SubscribeController');
 Route::resource('admin/order','OrdersController');
+Route::resource('admin/CancelOrder','CancelOrderController');
+Route::resource('admin/NewOrder','NewOrderController');
 
 Route::group(['middleware'=>'IsAdmin'], function (){
 
@@ -97,6 +98,7 @@ Route::get('/searchResult', array('as' => 'searchResult', 'uses' => 'ProductsCon
 
 
 Route::post('/subscribe-add','ContactUsController@save');
+Route::post('/update-orderStatus','OrdersController@updateStatus');
 Route::get('/success-subscribe','ContactUsController@success');
 
 // Cart controller

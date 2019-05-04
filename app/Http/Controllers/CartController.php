@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Province;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 use Illuminate\Http\Request;
 use App\Product;
 use App\SysStatic;
+
 use DB;
 
 
@@ -139,13 +141,14 @@ class CartController extends Controller
         $sys_footerLeft=SysStatic::where('id',5)->get();
         $sys_FirstOffer=SysStatic::where('id',9)->get();
         $sys_SecondOffer=SysStatic::where('id',10)->get();
+        $province = Province::get();
 
         if (Cart::count() == 0) {
 
             return redirect('/');
         }
         else{
-            return view('frontend.checkout.checkout', compact("cartItems","sys_SecondOffer","sys_FirstOffer","sys_s","sys_logo","sys_footerLeft"));
+            return view('frontend.checkout.checkout', compact("province","cartItems","sys_SecondOffer","sys_FirstOffer","sys_s","sys_logo","sys_footerLeft"));
         }
     }
 }

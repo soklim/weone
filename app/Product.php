@@ -11,6 +11,7 @@ class Product extends Model
 
         'pro_name',
         'pro_code',
+        'pro_status',
         'desc',
         'prices',
         'category_id',

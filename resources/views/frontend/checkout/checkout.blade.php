@@ -49,26 +49,28 @@
         <div class="col-md-12">
             <h3>Billing Detail</h3>
             <div class="form-group">
+                <label>Name: </label>
                 <input type="text" placeholder="Enter your name" name="customer_name" class="form-control" required>
             </div>
             <div class="form-group">
+                <label>City/Province: </label>
                 <select class="form-control" name="province" required>
-                    <option value="">--select province--</option>
-                    <option value="1">Phnom Penh</option>
-                    <option value="2">Siem Reap</option>
-                    <option value="3">Battambang</option>
-                    <option value="4">Svay Rieng</option>
-                    <option value="5">Takeo</option>
+                    @foreach($province as $pro)
+                    <option value="{{$pro->id}}">{{$pro->province_name}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-group">
+                <label>Detail Address: </label>
                 <textarea class="form-control" rows="5" name="address" placeholder="Enter your address"></textarea>
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Enter your phone" class="form-control" name="phone" required>
+                <label>Phone number: </label>
+                <input type="number" placeholder="Enter your phone" class="form-control" name="phone" required>
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Enter your email" name="email" class="form-control">
+                <label>Email address: </label>
+                <input type="email" placeholder="Enter your email" name="email" class="form-control">
             </div>
         </div>
     </div>
@@ -97,7 +99,7 @@
                 {{--<input type="checkbox" name="term_and_condition" id="term_and_condition" value="" required="required"> I already agree with term and condition. We will use your order privacy to do order processing--}}
             {{--</div>--}}
             <input type="hidden" name="quantity" value="{{$cartItem->qty}}">
-            <input type="hidden" name="status_product" value="Ordering">
+            <input type="hidden" name="status_product" value="1">
             <input type="hidden" name="order_unit_price" value="{{ $cartItem->price}}">
             {{ csrf_field() }}
             <div class="form-group">

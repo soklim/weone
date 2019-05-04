@@ -18,12 +18,8 @@
             <li class="breadcrumb-item">
                 <a href="#">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">All Ordering</li>
+            <li class="breadcrumb-item active">Canceled Order</li>
         </ol>
-        @if(Session::has('deleted_user'))
-            <p class="bg-danger">{{session('deleted_user')}}</p>
-        @endif
-
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table" id="dataTable">
@@ -36,7 +32,6 @@
                         <th scope="col">Email</th>
                         <th scope="col">Province</th>
                         <th scope="col">Status</th>
-                        <th scope="col"></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -49,10 +44,6 @@
                             <td>{{$ord->email}}</td>
                             <td>{{$ord->provinces->province_name}}</td>
                             <td>{{$ord->orderStatus->status_name}}</td>
-                            <td>
-                                <a href="{{route('order.edit',$ord->order_id)}}"><i class="btn btn-primary fas fa-eye"></i></a>
-                            </td>
-
                         </tr>
                     @endforeach
 

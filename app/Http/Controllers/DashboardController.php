@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Product;
 use App\Promotion;
 use App\Subscribe;
+use App\Orders;
 
 class DashboardController extends Controller
 {
@@ -19,6 +20,7 @@ class DashboardController extends Controller
     {
 //        $pro=Product::all('');
         $pro=Product::all();
+        $newOrder=Orders::where('statuss',1)->get();
         $promotion = Promotion::all();
         $email = Subscribe::all();
 
@@ -31,7 +33,7 @@ class DashboardController extends Controller
         $user = Auth::user();
         if ($user) {
 
-            return view('admin.index',compact("pro","promotion","email","pro_innis","pro_laneige","pro_iope","pro_etude","pro_other"));
+            return view('admin.index',compact("newOrder","pro","promotion","email","pro_innis","pro_laneige","pro_iope","pro_etude","pro_other"));
         }
     }
 }
