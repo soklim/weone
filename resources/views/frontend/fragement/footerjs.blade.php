@@ -35,7 +35,6 @@
 </script>
 <script>
     $(window).bind("resize", function () {
-        console.log($(this).width())
         if ($(this).width() < 768) {
             $('.products').removeClass('img-wrap');
             $('.card').removeClass('hovereffect');
@@ -67,7 +66,7 @@
   $('.video-btn').click(function() {
    $videoSrc = $(this).data( "src" );
   });
-  console.log($videoSrc);
+
 
 // when the modal is opened autoplay it
   $('#myModal').on('shown.bs.modal', function (e) {
@@ -85,6 +84,14 @@
 
 </script>
 
+
+
+<!-- Page level plugin JavaScript-->
+<script src="/vendor/datatables/jquery.dataTables.js"></script>
+<script src="/vendor/datatables/dataTables.bootstrap4.js"></script>
+
+<!-- Demo scripts for this page-->
+<script src="/js/demo/datatables-demo.js"></script>
 
 
 

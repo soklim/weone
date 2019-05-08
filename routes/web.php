@@ -26,6 +26,7 @@ Route::get('/brand-laneige','laneigeController@index');
 Route::get('/brand-etude-house','etudehouseController@index');
 Route::get('/brand-other','OtherController@index');
 Route::get('/all-brand','AllBrandController@index');
+Route::get('/tracking-form','OrderStatusController@index');
 Route::get('/offer','OfferController@index');
 Route::get('/best&new-product','BestProductController@index');
 Route::get('/about-us','AboutUsController@index');

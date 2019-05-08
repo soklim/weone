@@ -3,6 +3,7 @@
 <title>Weone</title>
 <style>
     .dropdown:hover .dropdown-menu{display: block;}
+
 </style>
 
 <head>
@@ -62,42 +63,45 @@
                     <a class="navbar-brand fa fa-home" href="/" style="color: white;"></a>
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="/best&new-product">BEST & NEW<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/best&new-product">Best & New<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/offer')}}">OFFER<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{url('/offer')}}">Offer<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="dropdown nav-item">
-                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">BRAND</a>
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Brand</a>
                             <ul class="dropdown-menu" style="background-color: #79bb2a;margin-top: 0px">
-                                <li class="nav-item"> <a class="nav-link dropdown" href="{{url('/brand-innisfree')}}">INNISFREE</a></li>
-                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/brand-laneige')}}">LANEIGE</a></li>
+                                <li class="nav-item"> <a class="nav-link dropdown" href="{{url('/brand-innisfree')}}">Innisfree</a></li>
+                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/brand-laneige')}}">Laneige</a></li>
                                 <li class="nav-item"><a class="nav-link dropdown" href="{{url('/brand-iope')}}">IOPE</a></li>
-                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/brand-etude-house')}}">ETUDE HOUSE</a></li>
-                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/brand-other')}}">OTHER</a></li>
+                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/brand-etude-house')}}">Etude house</a></li>
+                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/brand-other')}}">Other</a></li>
 
                             </ul>
                         </li>
                         <li class="dropdown nav-item">
 
-                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">SKIN CARE</a>
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Skin Care</a>
                             <ul class="dropdown-menu" style="background-color: #79bb2a;margin-top: 0px">
-                                <li class="nav-item"> <a class="nav-link dropdown" href="{{url('/type/'.'1')}}">CREAM</a></li>
-                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'2')}}">TONER</a></li>
-                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'3')}}">SERUM</a></li>
-                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'4')}}">CLEANSER</a></li>
-                                <li class="nav-item"> <a class="nav-link dropdown" href="{{url('/type/'.'5')}}">SUN CARE</a></li>
-                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'6')}}">MASK</a></li>
-                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'7')}}">LOTION</a></li>
-                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'8')}}">ACCESSORIES</a></li>
-                                <li class="nav-item"><a class="nav-link dropdown " href="{{url('/type/'.'9')}}">OTHER</a></li>
+                                <li class="nav-item"> <a class="nav-link dropdown" href="{{url('/type/'.'1')}}">Cream</a></li>
+                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'2')}}">Toner</a></li>
+                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'3')}}">Serum</a></li>
+                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'4')}}">Cleanser</a></li>
+                                <li class="nav-item"> <a class="nav-link dropdown" href="{{url('/type/'.'5')}}">Sun Care</a></li>
+                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'6')}}">Mask</a></li>
+                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'7')}}">Lotton</a></li>
+                                <li class="nav-item"><a class="nav-link dropdown" href="{{url('/type/'.'8')}}">Accessories</a></li>
+                                <li class="nav-item"><a class="nav-link dropdown " href="{{url('/type/'.'9')}}">Other</a></li>
 
                             </ul>
 
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/make-up')}}">MAKE-UP<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{url('/make-up')}}">Make-Up<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('/tracking-form')}}">Order Tracking<span class="sr-only">(current)</span></a>
                         </li>
 
                     </ul>
