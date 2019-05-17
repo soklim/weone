@@ -30,7 +30,7 @@
                         <th scope="col">Category</th>
                         <th scope="col">Brand</th>
                         <th scope="col">Top Product</th>
-                        <th scope="col">Order</th>
+                        <th scope="col">Status</th>
                         <th scope="col">Images</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
@@ -46,7 +46,7 @@
                             <td>{{$product->category->category_name}}</td>
                             <td>{{$product->brand->brand_name}}</td>
                             <td>{{$product->isPop}}</td>
-                            <td>{{$product->order}}</td>
+                            <td>{{$product->pro_status}}</td>
                             <td><img height="50px;" src="{{$product->photo?$product->photo->file:'https://via.placeholder.com/400x400'}}" alt=""></td>
 
                             <td>

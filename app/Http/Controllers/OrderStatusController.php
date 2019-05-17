@@ -28,6 +28,21 @@ class OrderStatusController extends Controller
         return view("frontend.checkout.tracking",compact("order","sys_SecondOffer","sys_FirstOffer","sys_s","sys_logo","sys_footerLeft"));
     }
 
+    public function trackResult(Request $request){
+        $sys_s=SysStatic::where('id',2)->get();
+        $sys_logo=SysStatic::where('id',3)->get();
+        $sys_footerLeft=SysStatic::where('id',5)->get();
+        $sys_FirstOffer=SysStatic::where('id',9)->get();
+        $sys_SecondOffer=SysStatic::where('id',10)->get();
+
+        $phone=$request->input('phone');
+        $order = \App\Orders::where('phone',$phone)->get();
+
+
+        return view("frontend.checkout.trackingResult",compact("order","sys_SecondOffer","sys_FirstOffer","sys_s","sys_logo","sys_footerLeft"));
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

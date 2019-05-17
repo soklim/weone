@@ -51,18 +51,16 @@
             </div>
             <div class="list-group">
                 <a href="#" class="list-group-item">
-                    <span><b>Subtotal:</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ Cart::subtotal() }} $</span>
+                    <span><b>Subtotal:</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ Cart::subtotal() }} $</span>
                 </a>
-                <a href="#" class="list-group-item"><span><b>Shipping:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free shipping</span></a>
+                <a href="#" class="list-group-item"><span><b>Delivery:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;City=1.5$/Province=2$</span></a>
                 <a href="#" class="list-group-item"><span><b>Total:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ Cart::subtotal() }} $</span></a>
                 <a href="{{ url('view-card') }}" class="list-group-item">
                     <button class="btn btn-danger btn-product btn-block"><span class=""></span>Checkout</button>
                 </a>
             </div>
-
-
+            <strong style="color: red;font-size: 12px">*Total price does not included delivery fee</strong>
         </div>
-
     </div>
 </div>
 <div style="height: 30px;"></div>
@@ -77,9 +75,16 @@
       var newQty = $('#upCart{{ $cartItem->id }}').val();
       var rowID = $('#rowID{{ $cartItem->id }}').val();
       if(newQty <= 0) {
-      alert('Please input valid quantity');
-      return false;
-      } else {
+          alert('Quantity cannot order less than 1');
+          $('#upCart{{ $cartItem->id }}').val(1);
+          return false;
+      }
+      else if (newQty >= 11){
+              alert('Quantity cannot order above 10');
+              $('#upCart{{ $cartItem->id }}').val(10);
+              return false;
+      }
+      else {
         // window.location.reload();
       $.ajax({
         url:'{{ url("/cart/update/$cartItem->id") }}',

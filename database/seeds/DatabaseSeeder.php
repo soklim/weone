@@ -65,6 +65,9 @@ class DatabaseSeeder extends Seeder
         $category = Category::create([
             'category_name'=>'Other'
         ]);
+        $category = Category::create([
+            'category_name'=>'Make-up'
+        ]);
 
         $OrderStatus = \App\OrderStatus::create([
             'status_name'=>'Ordering'
@@ -83,17 +86,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $province = \App\Province::create([
-            'province_name'=>'Phnom Penh'
+            'province_name'=>'City'
         ]);
         $province = \App\Province::create([
-            'province_name'=>'Kondal'
+            'province_name'=>'Province'
         ]);
-        $province = \App\Province::create([
-            'province_name'=>'Battambang'
-        ]);
-        $province = \App\Province::create([
-            'province_name'=>'Siem Reap'
-        ]);
+
 
 
 

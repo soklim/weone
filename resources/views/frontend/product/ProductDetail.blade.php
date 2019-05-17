@@ -28,11 +28,14 @@
                         <h3 class="title mb-3">{{$detail->pro_name}}</h3>
 
                         <p class="price-detail-wrap">
-                    <span class="price h3 text-warning">
-                        {{--<span class="currency">US $</span><span class="num">{{$detail->prices}}</span>--}}
-                        <p><a href="#" style="color: red !important;font-weight: bold;">{{ $detail->prices }}$</a></p>
-                    </span>
+                            <span class="price h3 text-warning">
+                                {{--<span class="currency">US $</span><span class="num">{{$detail->prices}}</span>--}}
+                                <p><a href="#" style="color: red !important;font-weight: bold;">{{ $detail->prices }}$</a></p>
+                            </span>
                         </p>
+                        <dl class="param param-feature">
+                            <strong>Product Status: <label class="pro_status"> {{$detail->pro_status}}</label></strong>
+                        </dl>
                         <dl class="param param-feature">
                             <dt>Product Code: #{{$detail->pro_code}}</dt>
                         </dl>

@@ -1,44 +1,4 @@
-.bg-overlay-innisfree {
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(/images/brandheader/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    color: #fff;
 
-}
-.bg-overlay-iope{
-     background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(/images/brandheader/iope.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center center;
-     color: #fff;
-
- }
-.bg-overlay-etude{
-     background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(/images/brandheader/etudehouse.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center center;
-     color: #fff;
-
- }
-
-.bg-overlay-laneige{
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(/images/brandheader/laneige.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    color: #fff;
-
-}
-.bg-overlay-other{
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(/images/brandheader/other.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    color: #fff;
-
-}
 .title-about{
     color: white;
     text-align: center;

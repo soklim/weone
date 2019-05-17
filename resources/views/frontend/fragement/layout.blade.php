@@ -6,6 +6,7 @@
 
 </style>
 
+
 <head>
 
     @include('frontend.fragement.style')
@@ -25,7 +26,7 @@
             <div class="col-lg-8 col-md-8 col-xs-12" id="ads">
 
                 @foreach($sys_FirstOffer as $FirstOffer)
-                        <a href="#" class="adv col-lg-5  col-md-5">
+                        <a href="#" class="adv col-lg-4  col-md-4 col-sm-3">
                             <span class="img"><img src="{{$FirstOffer->photo->file}}"></span>
                             <span>{{$FirstOffer->static_value_first}}<br>{{$FirstOffer->static_value_second}}</span><b class="vtc_middle"></b>
                         </a>
@@ -33,16 +34,19 @@
 
 
                 @foreach($sys_SecondOffer as $SecondOffer)
-                            <a href="#" class="adv col-lg-4  col-md-5">
+                            <a href="#" class="adv col-lg-4  col-md-4 col-sm-3">
                                 <span class="img"><img src="{{$SecondOffer->photo->file}}"></span>
                                 <span>{{$SecondOffer->static_value_first}}<br>{{$SecondOffer->static_value_second}} </span><b class="vtc_middle"></b>
                             </a>
                  @endforeach
-                    <a href="{{ route('cart.index')}}" class="cart col-lg-3 col-md-2">
+                    <a href="{{ route('cart.index')}}" class="cart col-lg-2 col-md-2 col-sm-3">
                     <span class="fa-stack fa-2x has-badge" data-count="{{ Cart::count() }}" >
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span></a>
+                    <a href="{{url('/tracking-form')}}" class="tracking col-lg-2 col-md-2 col-sm-3">
+                        <img src="/images/header/tracking.png" width="45px" data-toggle="tooltip" data-placement="right" title="Tracking">
+                    </a>
 
             </div>
 
@@ -100,9 +104,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/make-up')}}">Make-Up<span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('/tracking-form')}}">Order Tracking<span class="sr-only">(current)</span></a>
-                        </li>
+                        {{--<li class="nav-item">--}}
+                            {{--<a class="nav-link" href="{{url('/tracking-form')}}">Order Tracking<span class="sr-only">(current)</span></a>--}}
+                        {{--</li>--}}
 
                     </ul>
                     <form class="form-inline my-2 my-lg-0" action="{{route('searchResult')}}">
@@ -145,7 +149,7 @@
                     <form method="post" action = "/subscribe-add">
                         @csrf
                         <div class="input-group">
-                            <input class="form-control" type="email" placeholder="Enter your email" name="email" id="email" required style="width: 150px">
+                            <input class="form-control" type="email" maxlength="50" placeholder="Enter your email" name="email" id="email" required style="width: 150px">
                             <button class="form-control btn btn-primary" type="submit">Subscribe</button>
                         </div>
                     </form>
@@ -156,8 +160,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
                     <ul class="list-unstyled list-inline social text-center">
                         <li class="list-inline-item"><a href="https://www.facebook.com/weonekh/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fas fa-line"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                       <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
                         <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-youtube"></i></a></li>
                     </ul>
                 </div>

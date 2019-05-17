@@ -52,6 +52,11 @@
                 </div>
 
                 <div class="form-group">
+                    {!! Form::label('pro_status','Product Status') !!}
+                    {!! Form::select('pro_status',[''=>'--Select--'] +  array('In Stock' => 'In Stock', 'Out of Stock' => 'Out of Stock'),null,['class'=>'form-control','required']) !!}
+                </div>
+
+                <div class="form-group">
                     {!! Form::label('order','Order:') !!}
                     {!! Form::text('order',null,['class'=>'form-control','maxlength'=>'1']) !!}
                 </div>
@@ -83,7 +88,7 @@
 
 
                  <div class="form-group">
-                    {!! Form::submit('Create',['class'=>'btn btn-primary']) !!}
+                    {!! Form::submit('Submit',['class'=>'btn btn-primary']) !!}
                 </div>
 
 

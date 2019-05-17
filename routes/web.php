@@ -30,7 +30,7 @@ Route::get('/tracking-form','OrderStatusController@index');
 Route::get('/offer','OfferController@index');
 Route::get('/best&new-product','BestProductController@index');
 Route::get('/about-us','AboutUsController@index');
-Route::get('/product-detail/{id}{category_id}{brand_id}', 'ProductDetailController@showproduct');
+Route::get('/product-detail/{id}/{category_id}/{brand_id}', 'ProductDetailController@showproduct');
 Route::get('/shopping-cart', 'ProductDetailController@cartDetail');
 Route::post('/order', 'OrdersController@save');
 
@@ -96,6 +96,9 @@ Route::post('change/password',function (){
 
 Route::get('/autoComplete', array('as' => 'autoComplete', 'uses' => 'ProductsController@autoComplete'));
 Route::get('/searchResult', array('as' => 'searchResult', 'uses' => 'ProductsController@searchResult'));
+
+Route::get('/trackingResult', array('as' => 'trackingResult', 'uses' => 'OrderStatusController@trackResult'));
+
 
 
 Route::post('/subscribe-add','ContactUsController@save');

@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 <title>weone</title>
 <link rel="icon" href="/images//header/weone.png">
@@ -23,6 +24,8 @@
 <link href="/css/brand.css" rel="stylesheet">
 <link href="/css/product-detail.css" rel="stylesheet">
 <link href="/css/offer.css" rel="stylesheet">
+
+<link href="/css/bootstrap-formhelpers.min.css" rel="stylesheet">
 
 
 

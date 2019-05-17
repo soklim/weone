@@ -50,7 +50,7 @@
             <h3>Billing Detail</h3>
             <div class="form-group">
                 <label>Name: </label>
-                <input type="text" placeholder="Enter your name" name="customer_name" class="form-control" required>
+                <input type="text" placeholder="Enter your name" name="customer_name" maxlength="30" class="form-control" required>
             </div>
             <div class="form-group">
                 <label>City/Province: </label>
@@ -62,15 +62,15 @@
             </div>
             <div class="form-group">
                 <label>Detail Address: </label>
-                <textarea class="form-control" rows="5" name="address" placeholder="Enter your address"></textarea>
+                <textarea class="form-control" rows="5" name="address" maxlength="255" placeholder="Enter your address"></textarea>
             </div>
             <div class="form-group">
                 <label>Phone number: </label>
-                <input type="number" placeholder="Enter your phone" class="form-control" name="phone" required>
+                <input type="number" placeholder="Enter your phone" onKeyPress="if(this.value.length==10) return false;" class="form-control" name="phone" required>
             </div>
             <div class="form-group">
                 <label>Email address: </label>
-                <input type="email" placeholder="Enter your email" name="email" class="form-control">
+                <input type="email" placeholder="Enter your email" maxlength="50" name="email" class="form-control">
             </div>
         </div>
     </div>
@@ -90,7 +90,7 @@
             </div>
             <div class="form-group" >
                 <label class="control-label">Description</label>
-                <textarea maxlength="300" id="desc"  class="form-control" rows="5" name="address" placeholder="e.g Pay by ABA Bank:
+                <textarea maxlength="300" id="desc" maxlength="255"  class="form-control" rows="5" name="address" placeholder="e.g Pay by ABA Bank:
                 My account is:12345678, Amount:50$, Transfer Date: 2019/01/01" required disabled></textarea>
 
             </div>

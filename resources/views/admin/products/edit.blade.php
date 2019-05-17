@@ -51,8 +51,13 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('isPop','Popular:') !!}
+                    {!! Form::label('isPop','is it the new product?') !!}
                     {!! Form::select('isPop',[''=>'--Select--'] +  array('1' => 'Yes', '0' => 'No'),null,['class'=>'form-control','required']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('pro_status','Product Status') !!}
+                    {!! Form::select('pro_status',[''=>'--Select--'] +  array('In Stock' => 'In Stock', 'Out of Stock' => 'Out of Stock'),null,['class'=>'form-control','required']) !!}
                 </div>
 
                 <div class="form-group">
@@ -85,7 +90,7 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::submit('Confirm',['class'=>'btn btn-primary']) !!}
+                    {!! Form::submit('Submit',['class'=>'btn btn-primary']) !!}
                 </div>
 
 

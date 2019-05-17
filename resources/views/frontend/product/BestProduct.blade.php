@@ -22,7 +22,7 @@
             @foreach($best_pro as $best)
                 <div class="col-md-3" style="height: 100%">
                     <figure class="card card-product hovereffect">
-                        <a href="{!! url('product-detail/'. $best->id.$best->category_id.$best->brand_id) !!}"><div class="mx-auto d-block img-wrap products"><img src="{{$best->photo->file}}"></div></a>
+                        <a href="{!! url('product-detail/'. $best->id.'/'.$best->category_id.'/'.$best->brand_id) !!}"><div class="mx-auto d-block img-wrap products"><img src="{{$best->photo->file}}"></div></a>
                         <figcaption class="info-wrap" style="padding-bottom: 0px">
                             <a href="{!! url('product-detail/'. $best->id.$best->category_id.$best->brand_id) !!}"><h5 class="title">{{$best->pro_name}}</h5></a>
                         </figcaption>
@@ -32,7 +32,7 @@
                             </div> <!-- price-wrap.// -->
                         </div> <!-- bottom-wrap.// -->
                         <div class="bottom-wrap">
-                            <a href="{!! url('product-detail/'. $best->id.$best->category_id.$best->brand_id) !!}"><button class="btn btn-sm btn-primary" >View Detail</button></a>
+                            <a href="{!! url('product-detail/'. $best->id.'/'.$best->category_id.'/'.$best->brand_id) !!}"><button class="btn btn-sm btn-primary" >View Detail</button></a>
                             <a href="{{route('cart.edit',$best->id)}}"><button class="btn btn-sm btn-success">Add to cart</button></a>
 
                         </div> <!-- bottom-wrap.// -->

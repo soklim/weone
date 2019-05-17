@@ -1,8 +1,11 @@
 
 <link href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.css" rel="stylesheet"/>
 
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script href="/js/bootstrap-formhelpers.min.js"></script>
+
+<script src="/js/jquery-1.10.2.js"></script>
+<script src="/js/jquery-ui.js"></script>
 <!-- REMOVE THIS >> <script src="js/jquery.js" type="text/javascript"></script> -->
 <script src="js/jquery.datetimepicker.full.js"></script>
 <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -90,8 +93,7 @@
 <script src="/vendor/datatables/jquery.dataTables.js"></script>
 <script src="/vendor/datatables/dataTables.bootstrap4.js"></script>
 
-<!-- Demo scripts for this page-->
-<script src="/js/demo/datatables-demo.js"></script>
+
 
 
 
