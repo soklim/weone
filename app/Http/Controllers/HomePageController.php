@@ -19,7 +19,8 @@ class HomePageController extends Controller
     {
         //
         $pro=Product::all()->take(3);
-        $pro_popular=Product::where('isPop',1)->orderBy('order','asc')->get()->take(8);
+        $pro_popular1=Product::where('isPop',1)->orderBy('created_at','desc')->limit(4)->offset(0)->get();
+        $pro_popular2=Product::where('isPop',1)->orderBy('created_at','desc')->limit(4)->offset(4)->get();
 
         $sys_s=SysStatic::where('id',2)->get();
         $sys_logo=SysStatic::where('id',3)->get();
@@ -36,7 +37,7 @@ class HomePageController extends Controller
         $slide3=SlideShow::where('id',3)->get();
 
 
-        return view("frontend.homepage.homepage",compact("sys_SecondOffer","sys_FirstOffer","slide1","slide2","slide3","promotion","pro","sys_s","pro_popular","sys_logo","sys_footerLeft","sys_mainLeft","sys_mainCenter","sys_mainRight"));
+        return view("frontend.homepage.homepage",compact('pro_popular2',"sys_SecondOffer","sys_FirstOffer","slide1","slide2","slide3","promotion","pro","sys_s","pro_popular1","sys_logo","sys_footerLeft","sys_mainLeft","sys_mainCenter","sys_mainRight"));
     }
 
     /**

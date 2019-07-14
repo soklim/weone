@@ -14,11 +14,11 @@ class AllBrandController extends Controller
     {
         //
 
-        $pro_innis=Product::where('brand_id',1)->orderBy('order','asc')->get();
-        $pro_laneige=Product::where('brand_id',2)->orderBy('order','asc')->get();
-        $pro_iope=Product::where('brand_id',3)->orderBy('order','asc')->get();
-        $pro_etude=Product::where('brand_id',4)->orderBy('order','asc')->get();
-        $pro_other=Product::where('brand_id',5)->orderBy('order','asc')->get();
+        $pro_innis=Product::where('brand_id',1)->orderBy('created_at','desc')->get();
+        $pro_laneige=Product::where('brand_id',2)->orderBy('created_at','desc')->get();
+        $pro_iope=Product::where('brand_id',3)->orderBy('created_at','desc')->get();
+        $pro_etude=Product::where('brand_id',4)->orderBy('created_at','desc')->get();
+        $pro_other=Product::where('brand_id',5)->orderBy('created_at','desc')->get();
 
         $sys_s=SysStatic::where('id',2)->get();
         $sys_logo=SysStatic::where('id',3)->get();

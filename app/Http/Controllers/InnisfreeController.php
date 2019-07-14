@@ -15,7 +15,7 @@ class InnisfreeController extends Controller
     {
         //
 
-        $pro_innis=Product::where('brand_id',1)->orderBy('order','asc')->get();
+        $pro_innis=Product::where('brand_id',1)->orderBy('created_at','desc')->get();
         $bg=SysStatic::where('id',11)->get();
 
         $sys_s=SysStatic::where('id',2)->get();

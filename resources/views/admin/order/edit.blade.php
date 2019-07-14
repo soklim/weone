@@ -66,6 +66,9 @@
             <input type="hidden" value="{{$ord->orderStatus->id}}" id="statusID" name="statusID">
             <input type="hidden" name="order_id" value="{{$ord->order_id}}">
             <button type="submit" class="btn btn-primary mr-sm-2">Submit</button>
+            <a href="{{route('order.show',$ord->order_id)}}" target="_blank"><i class="btn btn-primary fa fa-print"></i></a>
+
+
         </form>
 
         @endforeach

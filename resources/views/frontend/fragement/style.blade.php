@@ -15,6 +15,8 @@
 <!-- Custom styles for this template-->
 
 <link href="/css/main-frontend.css" rel="stylesheet">
+<link href="/css/product.css" rel="stylesheet">
+
 <link href="/css/footer_css.css" rel="stylesheet">
 <link href="/css/contactus.css" rel="stylesheet">
 <link href="/css/aboutus.css" rel="stylesheet">
@@ -26,6 +28,7 @@
 <link href="/css/offer.css" rel="stylesheet">
 
 <link href="/css/bootstrap-formhelpers.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
 
 

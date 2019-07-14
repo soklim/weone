@@ -10,6 +10,10 @@ use App\Product;
 class CancelOrderController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('IsAdmin');
+    }
     public function index(){
         $order = Orders::where('statuss',5)->get();
         $pro_innis=Product::where('brand_id',1)->get();

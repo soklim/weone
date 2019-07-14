@@ -29,16 +29,22 @@ class User extends Authenticatable
     ];
 
     public function role(){
-        return $this->belongsTo('App\Role','role_id');
-    }
+    return $this->belongsTo('App\Role','role_id');
+}
     public function isAdmin(){
 
-        if($this->role->name=='Admin' && $this->isActive ==1){
+        if($this->role->id=='1' || $this->role->id=='2' && $this->isActive ==1){
             return true;
         }
         return false;
     }
+    public function isSuperAdmin(){
 
+        if($this->role->id=='1' && $this->isActive ==1){
+            return true;
+        }
+        return false;
+    }
     public function photo(){
 
        return $this->belongsTo('App\Photo');

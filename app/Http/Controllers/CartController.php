@@ -60,10 +60,9 @@ class CartController extends Controller
     {
         $cartItems = Cart::content();
         if($cartItems==''){
-            return redirect('frontend/product-lists');
+            return redirect('/');
         }
-        $data1['data'] = DB::table('tbl_category')->get();
-        return \View::make('frontend.checkout.checkout', compact('cartItems'),$data1);
+        return \View::make('frontend.checkout.checkout', compact('cartItems'));
     }
 
     /**

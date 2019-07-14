@@ -42,7 +42,7 @@
 
     <ul class="sidebar navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="/admin-sv">
+            <a class="nav-link" href="/admin">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </a>
@@ -86,7 +86,7 @@
         <li class="nav-item">
             <a class="nav-link" href="{{route('order.index')}}">
                 <i class="fas fa-fw fa-shopping-cart"></i>
-                <span>All Order</span>
+                <span>Processing Order</span>
             </a>
         </li>
         <li class="nav-item">
@@ -102,7 +102,7 @@
             </a>
         </li>
 
-        @if(Auth::user()->role->name=='Admin')
+        @if(Auth::user()->role->id=='1')
             <li class="nav-item">
                 <a class="nav-link" href="{{route('users.index')}}">
                     <i class="fas fa-user"></i>
@@ -119,7 +119,7 @@
     <footer class="sticky-footer">
         <div class="container my-auto">
             <div class="copyright text-center my-auto">
-                <span>Copyright ©weone 2019</span>
+                <span>Copyright © Anachak Technology 2019</span>
             </div>
         </div>
     </footer>

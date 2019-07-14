@@ -11,6 +11,10 @@ use App\OrderDetail;
 class NewOrderController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('IsAdmin');
+    }
     public function index(){
         $order = Orders::where('statuss',1)->get();
         $pro_innis=Product::where('brand_id',1)->get();

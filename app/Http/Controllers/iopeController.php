@@ -15,7 +15,7 @@ class iopeController extends Controller
     {
         //
 
-        $pro_iope=Product::where('brand_id',3)->orderBy('order','asc')->get();
+        $pro_iope=Product::where('brand_id',3)->orderBy('created_at','desc')->get();
         $bg=SysStatic::where('id',13)->get();
 
         $sys_s=SysStatic::where('id',2)->get();

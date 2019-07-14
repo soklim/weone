@@ -61,11 +61,6 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('order','Order:') !!}
-                    {!! Form::text('order',null,['class'=>'form-control','maxlength'=>'1']) !!}
-                </div>
-
-                <div class="form-group">
                     {!! Form::label('desc','Description:') !!}
                     {!! Form::textarea('desc',null,['class'=>'form-control','required','maxlength'=>'300']) !!}
                 </div>

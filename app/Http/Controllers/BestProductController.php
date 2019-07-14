@@ -13,7 +13,7 @@ class BestProductController extends Controller
     {
         //
 
-        $best_pro=Product::where('isPop',1)->orderBy('order','asc')->get();
+        $best_pro=Product::where('isPop',1)->orderBy('created_at','desc')->get();
         $sys_s=SysStatic::where('id',2)->get();
         $sys_logo=SysStatic::where('id',3)->get();
         $sys_footerLeft=SysStatic::where('id',5)->get();

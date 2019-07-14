@@ -14,7 +14,7 @@ class AdminUserController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('IsAdmin');
+        $this->middleware('IsSuperAdmin');
     }
     /**
      * Display a listing of the resource.

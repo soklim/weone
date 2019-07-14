@@ -13,7 +13,7 @@ class etudehouseController extends Controller
     {
         //
 
-        $pro_etude=Product::where('brand_id',4)->orderBy('order','asc')->get();
+        $pro_etude=Product::where('brand_id',4)->orderBy('created_at','desc')->get();
         $bg=SysStatic::where('id',14)->get();
 
         $sys_s=SysStatic::where('id',2)->get();

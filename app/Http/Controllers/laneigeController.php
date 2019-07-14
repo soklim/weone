@@ -14,7 +14,7 @@ class laneigeController extends Controller
     {
         //
 
-        $pro_laneige=Product::where('brand_id',2)->orderBy('order','asc')->get();
+        $pro_laneige=Product::where('brand_id',2)->orderBy('created_at','desc')->get();
         $bg=SysStatic::where('id',12)->get();
 
         $sys_s=SysStatic::where('id',2)->get();

@@ -2,7 +2,12 @@
 @extends('frontend.fragement.layout')
 
 @section('content1')
-<div style="height: 20px;"></div>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.min.css" rel="stylesheet">
+
+
+    <div style="height: 20px;"></div>
 <div class="container">
     <form role="form" action="{{url('order')}}" method="post">
     <div class="row">
@@ -66,7 +71,11 @@
             </div>
             <div class="form-group">
                 <label>Phone number: </label>
-                <input type="number" placeholder="Enter your phone" onKeyPress="if(this.value.length==10) return false;" class="form-control" name="phone" required>
+
+                <select id="countries_phone1" class="form-control bfh-countries" data-country="KH" style="display: none"></select>
+                <br><br>
+                <input type="text" class="form-control bfh-phone" id="phone" name="phone" data-country="countries_phone1">
+                {{--<input type="number" placeholder="Enter your phone" onKeyPress="if(this.value.length==10) return false;" class="form-control" name="phone" required>--}}
             </div>
             <div class="form-group">
                 <label>Email address: </label>
@@ -104,6 +113,8 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <button class="btn btn-success btn-lg pull-right" id="submit" type="submit"  >Place order</button>
+                {{--<button class="btn btn-success btn-lg pull-right" id="submit" onclick="Test();">Test</button>--}}
+
                 </br> </br>
             </div>
 
@@ -112,8 +123,13 @@
     </div>
     </form>
 </div>
+
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js">
+    </script>
 <script>
     $(document).ready(function () {
         $('#payment').on('change', function () {
@@ -128,6 +144,12 @@
     });
 
 </script>
+    <script>
+        function Test() {
+            var phone = document.getElementById('phone').value;
+            alert(phone);
+        }
+    </script>
 
 @stop
 
