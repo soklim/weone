@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
     public function index($cat_id){
-        $pro_cate=Product::where('category_id',$cat_id)->orderBy('order','asc')->get();
+        $pro_cate=Product::where('category_id',$cat_id)->orderBy('created_at','desc')->get();
 
         $sys_s=SysStatic::where('id',2)->get();
         $sys_logo=SysStatic::where('id',3)->get();
@@ -22,7 +22,7 @@ class CategoryController extends Controller
 
     public function makeup()
     {
-        $make_up = Product::where('category_id', 10)->orderBy('order', 'asc')->get();
+        $make_up = Product::where('category_id', 10)->orderBy('created_at','desc')->get();
         $bg = SysStatic::where('id', 16)->get();
 
         $sys_s = SysStatic::where('id', 2)->get();

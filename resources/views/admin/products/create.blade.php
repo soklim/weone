@@ -2,6 +2,8 @@
 @extends('admin.fragement.layout')
 
 @section('content1')
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
 
     <div class="container-fluid">
 
@@ -70,6 +72,23 @@
                     {!! Form::label('photo_id','Photo:') !!}
                     {!! Form::file('photo_id',null,['class'=>'form-control']) !!}
                 </div>
+                <div class="form-group">
+                    <label>Thumbnail Images:</label>
+                    <div class="input-group control-group increment" >
+                        <input type="file" name="filename[]" class="form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-success" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
+                        </div>
+                    </div>
+                    <div class="clone hide" style="display: none">
+                        <div class="control-group input-group" style="margin-top:10px">
+                            <input type="file" name="filename[]" class="form-control">
+                            <div class="input-group-btn">
+                                <button class="btn btn-danger" type="button"><i class="glyphicon glyphicon-remove"></i> Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="alert alert-danger" role="alert" style="display: none" id="validfile">
                     <a href="#" class="close" data-dismiss="alert">&times;</a>
@@ -92,5 +111,55 @@
     </div>
     <!-- /.container-fluid -->
 
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+        $(".btn-success").click(function(){
+        var html = $(".clone").html();
+        $(".increment").after(html);
+        });
+
+        $("body").on("click",".btn-danger",function(){
+        $(this).parents(".control-group").remove();
+        });
+
+        });
+
+    </script>
+
+    <script>
+        // Allow upload only file that have extension: .jpg, ,jpeg, .bmp, .gif & .png
+        var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];
+        function Validate(oForm) {
+            var arrInputs = oForm.getElementsByTagName("input");
+            for (var i = 0; i < arrInputs.length; i++) {
+                var oInput = arrInputs[i];
+                if (oInput.type == "file") {
+                    var sFileName = oInput.value;
+                    if (sFileName.length > 0) {
+                        var blnValid = false;
+                        for (var j = 0; j < _validFileExtensions.length; j++) {
+                            var sCurExtension = _validFileExtensions[j];
+                            if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+                                blnValid = true;
+                                break;
+                            }
+                        }
+
+                        if (!blnValid) {
+                            document.getElementById("validfile").style.display = "block";
+
+                            return false;
+                            location.reload();
+
+                        }
+                    }
+                }
+            }
+            alert("Successfully!!!");
+            return true;
+        }
+    </script>
 
 @stop

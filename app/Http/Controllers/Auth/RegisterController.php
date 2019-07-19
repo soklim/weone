@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/user-panel/{id}';
 
     /**
      * Create a new controller instance.
@@ -39,6 +39,8 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+
+
 
     /**
      * Get a validator for an incoming registration request.
@@ -66,6 +68,8 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'phone'=> $data['phone'],
+            'address'=>$data['address'],
             'password' => Hash::make($data['password']),
         ]);
     }

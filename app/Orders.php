@@ -11,7 +11,7 @@ class Orders extends Model
 
         'order_id',
         'order_date',
-        'customer_name',
+        'user_id',
         'phone',
         'email',
         'province',
@@ -29,5 +29,10 @@ class Orders extends Model
     public function provinces(){
 
         return $this->belongsTo('App\Province','province');
+    }
+
+    public function user(){
+
+        return $this->belongsTo('App\User','user_id');
     }
 }

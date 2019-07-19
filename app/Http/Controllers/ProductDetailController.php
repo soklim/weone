@@ -6,6 +6,7 @@ use App\Brand;
 use App\Product;
 use App\SlideShow;
 use App\SysStatic;
+use App\Thumbnail;
 use Illuminate\Http\Request;
 use App\Category;
 use App\User;
@@ -19,6 +20,7 @@ class ProductDetailController extends Controller
     {
 //
         $pro_details=Product::where('id',$id)->get();
+        $thumbnail = Thumbnail::where('item_id',$id)->get();
         $category=Category::where('id',$category_id)->get();
         $brand=Brand::where('id',$brand_id)->get();
 
@@ -28,7 +30,7 @@ class ProductDetailController extends Controller
         $sys_FirstOffer=SysStatic::where('id',9)->get();
         $sys_SecondOffer=SysStatic::where('id',10)->get();
 
-        return view('frontend.product.ProductDetail',compact("brand","sys_SecondOffer","sys_FirstOffer",'pro_details','category',"sys_s","sys_logo","sys_footerLeft"));
+        return view('frontend.product.ProductDetail',compact('thumbnail',"brand","sys_SecondOffer","sys_FirstOffer",'pro_details','category',"sys_s","sys_logo","sys_footerLeft"));
     }
 
     public function cartDetail()

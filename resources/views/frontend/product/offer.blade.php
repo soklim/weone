@@ -1,6 +1,15 @@
 
 @extends('frontend.fragement.layout')
 @section('content1')
+    <style>
+        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+            background-color: #663300;
+        }
+        a.nav-link.active {
+
+            color:#ffffff !important
+        }
+    </style>
 <div class="container">
 
     <br>

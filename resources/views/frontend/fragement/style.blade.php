@@ -32,6 +32,19 @@
 
 
 
+<!-- plugin: owl carousel  -->
+<link href="/plugins/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="/plugins/owlcarousel/assets/owl.theme.default.css" rel="stylesheet">
+<script src="/plugins/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- custom style -->
+<link href="/css/ui.css" rel="stylesheet" type="text/css"/>
+<link href="/css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+
+<!-- custom javascript -->
+<script src="/js/script.js" type="text/javascript"></script>
+
+
 
 
 

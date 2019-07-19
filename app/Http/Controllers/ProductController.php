@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Brand;
 use App\SysStatic;
+use App\Thumbnail;
 use App\Product;
 use Illuminate\Http\Request;
 use App\User;
@@ -88,7 +89,21 @@ class ProductController extends Controller
 
         $user->products()->create($input);
 
-//        return $request->all();
+        $maxid = Product::orderBy('id','desc')->max('id');
+        if($request->hasfile('filename'))
+        {
+
+            foreach($request->file('filename') as $image)
+            {
+                $name=$image->getClientOriginalName();
+                $image->move('images', $name);
+                $photo = new Thumbnail();
+                $photo->item_id =$maxid;
+                $photo->file = $name;
+                $photo->save();
+            }
+        }
+
         return redirect('/admin/products');
     }
 
@@ -113,6 +128,7 @@ class ProductController extends Controller
     {
         //
         $products = Product::findOrFail($id);
+        $thumbnail = Thumbnail::where('item_id',$id)->get();
 
         $category = Category::all();
         $brand=Brand::all();
@@ -123,7 +139,7 @@ class ProductController extends Controller
         $pro_etude=Product::where('brand_id',4)->get();
         $pro_other=Product::where('brand_id',5)->get();
 
-        return view('admin.products.edit',compact('products','category','brand',"pro_innis","pro_laneige","pro_iope","pro_etude","pro_other"));
+        return view('admin.products.edit',compact('thumbnail','products','category','brand',"pro_innis","pro_laneige","pro_iope","pro_etude","pro_other"));
     }
 
     /**
@@ -151,6 +167,20 @@ class ProductController extends Controller
 
             $input['photo_id'] = $photo->id;
 
+        }
+
+        if($request->hasfile('filename'))
+        {
+
+            foreach($request->file('filename') as $image)
+            {
+                $name=$image->getClientOriginalName();
+                $image->move('images', $name);
+                $photo = new Thumbnail();
+                $photo->item_id =$id;
+                $photo->file = $name;
+                $photo->save();
+            }
         }
 
 

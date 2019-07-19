@@ -33,20 +33,25 @@ Route::get('/about-us','AboutUsController@index');
 Route::get('/product-detail/{id}/{category_id}/{brand_id}', 'ProductDetailController@showproduct');
 Route::get('/promotion-detail/{id}','OfferController@details');
 Route::get('/shopping-cart', 'ProductDetailController@cartDetail');
-Route::post('/order', 'OrdersController@save');
+Route::post('/order', 'FrontOrderController@save');
 
 Route::get('/type/{cat_id}', 'CategoryController@index');
 
 Route::get('/carts/{id}', 'CartController@edit');
+Route::get('/user-panel/{id}','UserPanelController@index');
+Route::get('/change-password','UserPanelController@password');
 
 
-
+//Route::post('/update-profile/{id}','UserPanelController@update');
 
 //Admin Route
+
 
 Route::resource('admin/sys_statics','SysStaticController');
 
 Route::resource('admin/products','ProductController');
+Route::resource('admin/thumbnail','ThumbnailController');
+
 
 Route::resource('admin/slide_shows','SlideShowController');
 
@@ -87,12 +92,13 @@ Route::post('change/password',function (){
     if(Hash::check(Input::get('passwordOld'),$users['password']) && Input::get('password') == Input::get('password_confirmation')){
         $users->password = bcrypt(Input::get('password'));
         $users->save();
-        return redirect('/admin/profile')->with('success','Password Changed');
+
+        return redirect('/')->with('success','Password Changed');
     }else{
         return back()->with('error','Something went wrong!');
     }
 
-});
+})->middleware('auth');
 
 
 
@@ -105,6 +111,8 @@ Route::get('/trackingResult', array('as' => 'trackingResult', 'uses' => 'OrderSt
 
 
 Route::post('/subscribe-add','ContactUsController@save');
+
+
 Route::post('/update-orderStatus','OrdersController@updateStatus');
 Route::get('/success-subscribe','ContactUsController@success');
 
@@ -113,11 +121,11 @@ Route::resource('/cart', 'CartController');
 Route::get('remove-cart/{rowid}', 'CheckoutController@RemoveCart');
 
 
-Route::get('/view-card', 'CartController@viewCart');
+Route::get('/view-card', 'CartController@viewCart')->middleware('auth');
 
 
 Route::get('/cart/update/{id}', 'CartController@update');
 
-Route::get('/success-order','OrdersController@success');
+Route::get('/success-order','FrontOrderController@success');
 
 

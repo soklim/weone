@@ -82,7 +82,7 @@
                             <a class="add-to-cart" href="{{route('cart.edit',$prod->id)}}">Add to cart</a>
                         </div>
                         <div class="product-content">
-                            <h3 class="title primary" ><a href="{!! url('product-detail/'. $prod->id.'/'.$prod->category_id.'/'.$prod->brand_id) !!}" >{{str_limit($prod->pro_name,22) }}</a></h3>
+                            <h3 class="title primary" ><a href="{!! url('product-detail/'. $prod->id.'/'.$prod->category_id.'/'.$prod->brand_id) !!}" >{{str_limit($prod->pro_name,30) }}</a></h3>
                             <span class="price">${{$prod->prices}}</span>
                         </div>
                     </div>
@@ -98,7 +98,6 @@
                     <div class="col-md-3 col-sm-6 item-shadow-gray">
                         <div class="product-grid2">
                             <div class="product-image2">
-
                                 <img class="pic-1" src="{{$prod->photo->file}}" class="img-fluid w-100" id="product1">
                                 <img class="pic-2" src="{{$prod->photo->file}}" class="img-fluid w-100" id="product2">
 
@@ -152,20 +151,20 @@
             <div class="row">
                 @foreach($sys_mainLeft as $Left)
                 <div class="col-md-4 other-side">
-                    <h5 style="color:#79bb2a; margin-top: 10px">{{$Left->static_value_first}}</h5>
+                    <h5 style="color:#008000; margin-top: 10px">{{$Left->static_value_first}}</h5>
                     <a href="#"><img src="{{$Left->photo->file}}" class="img-fluid w-100" style="height: 190px"></a>
                 </div>
                 @endforeach
                 @foreach($sys_mainCenter as $Center)
                 <div class="col-md-4 other-side">
-                    <h5 style="color:#79bb2a; margin-top: 10px">{{$Center->static_value_first}}</h5>
+                    <h5 style="color:#008000; margin-top: 10px">{{$Center->static_value_first}}</h5>
                     <a href="#"><img src="{{$Center->photo->file}}" class="img-fluid w-100" style="height: 190px"></a>
                 </div>
                 @endforeach
 
                 @foreach($sys_mainRight as $Right)
                 <div class="col-md-4 other-side">
-                    <h5 style="color:#79bb2a; margin-top: 10px">{{$Right->static_value_first}}</h5>
+                    <h5 style="color:#008000; margin-top: 10px">{{$Right->static_value_first}}</h5>
                     <iframe width="100%" height="190px" src="{{$Right->static_value_second}}"  allow="autoplay;" >
                     </iframe>
                 </div>

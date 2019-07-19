@@ -14,7 +14,7 @@ class OtherController extends Controller
     {
         //
 
-        $pro_other=Product::where('brand_id',5)->orderBy('order','asc')->get();
+        $pro_other=Product::where('brand_id',5)->orderBy('created_at','desc')->get();
         $bg=SysStatic::where('id',15)->get();
 
         $sys_s=SysStatic::where('id',2)->get();

@@ -36,7 +36,7 @@
                 <label>Order No: <strong>{{$ord->order_id}}</strong></label>
             </div>
             <div class="col-md-3">
-                <label>Customer Name: <strong>{{$ord->customer_name}}</strong></label>
+                <label>Customer Name: <strong>{{$ord->user->name}}</strong></label>
             </div>
             <div class="col-md-3">
                 <label>Date: <strong>{{$ord->order_date}}</strong></label>

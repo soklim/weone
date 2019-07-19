@@ -44,7 +44,7 @@
                         <tr>
                             <th scope="row">{{$ord->order_id}}</th>
                             <td>{{$ord->order_date}}</td>
-                            <td>{{$ord->customer_name}}</td>
+                            <td>{{$ord->user->name}}</td>
                             <td>{{$ord->phone}}</td>
                             <td>{{$ord->email}}</td>
                             <td>{{$ord->provinces->province_name}}</td>

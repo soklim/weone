@@ -7,7 +7,6 @@
 <script src="/js/jquery-1.10.2.js"></script>
 <script src="/js/jquery-ui.js"></script>
 <!-- REMOVE THIS >> <script src="js/jquery.js" type="text/javascript"></script> -->
-<script src="js/jquery.datetimepicker.full.js"></script>
 <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

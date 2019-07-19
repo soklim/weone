@@ -62,7 +62,7 @@ a.nav-link.dropdown:hover{
     color: white;
 }
 .color-background{
-    background-color: #79bb2a;
+    background-color: #008000;
 }
 .navbar{
     padding: 0px;
@@ -121,19 +121,19 @@ a {
     text-decoration: none !important;
 }
 
-.adv span{
-    display: inline-block;
-    color: black;
-    font-size: 12px;
-    /*padding-top: 30px;*/
-    /*padding-bottom: 30px;*/
-}
+/*.adv span{*/
+    /*display: inline-block;*/
+    /*color: black;*/
+    /*font-size: 12px;*/
+    /*!*padding-top: 30px;*!*/
+    /*!*padding-bottom: 30px;*!*/
+/*}*/
 #pc-mode{
     padding-top: 20px;
 }
-#ads{
-    text-align: right;
-}
+/*#ads{*/
+    /*text-align: right;*/
+/*}*/
 .cart span{
     font-size: 24px;
 }
@@ -157,9 +157,7 @@ a {
 .other-side{
     text-align: center;
 }
-#logo{
-    text-align: center;
-}
+
 #cart{
     text-align: right;
 }
@@ -170,12 +168,12 @@ a {
     padding-bottom: 10px;
     padding-top: 10px;
 }
-.adv span{
-    font-size: 8px;
-}
-.adv span img{
-   width: 70%;
-}
+/*.adv span{*/
+    /*font-size: 8px;*/
+/*}*/
+/*.adv span img{*/
+   /*width: 70%;*/
+/*}*/
 .cart span{
     font-size: 15px;
 }

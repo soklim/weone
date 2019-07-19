@@ -22,14 +22,14 @@ h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
 .product-grid2 .social li a:after{content:'';height:15px;width:15px;border-radius:0;transform:translateX(-50%) rotate(45deg);top:-22px;z-index:-1}
 .product-grid2 .social li a:hover:after,.product-grid2 .social li a:hover:before{opacity:1}
 .product-grid2 .add-to-cart{color:#fff;background-color:#3498db;font-size:15px;text-align:center;width:100%;padding:10px 0;display:block;position:absolute;left:0;bottom:-100%;transition:all .3s}
-.product-grid2 .add-to-cart:hover{background-color:#79bb2a;text-decoration:none}
+.product-grid2 .add-to-cart:hover{background-color:#008000;text-decoration:none}
 .product-grid2:hover .add-to-cart{bottom:0}
 .product-grid2 .product-new-label{background-color:#3498db;color:#fff;font-size:17px;padding:5px 10px;position:absolute;right:0;top:0;transition:all .3s}
 .product-grid2:hover .product-new-label{opacity:0}
 .product-grid2 .product-content{padding:20px 10px;text-align:center}
 .product-grid2 .title{font-size:17px;margin:0 0 7px}
 .product-grid2 .title a{color:#3498db}
-.product-grid2 .title a:hover{color:#79bb2a}
+.product-grid2 .title a:hover{color:#008000}
 .product-grid2 .price{font-size:20px}
 @media screen and (max-width:990px){.product-grid2{margin-bottom:30px}
 }
@@ -40,6 +40,13 @@ h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
     .product-grid2 .product-image2 img{
         height: 350px;
     }
+    .logo img{
+        height: 200px;
+    }
+
+    .pro-detail img{
+        height: 250px;
+    }
 
 }
 @media only screen and (min-width: 768px) {
@@ -47,7 +54,17 @@ h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
         height: 260px;
     }
 
+    .logo img{
+        height: 120px;
+    }
+
+    .pro-detail img{
+        height: 340px;
+    }
+
 }
+
+
 
 .item-shadow-gray {
     -webkit-box-shadow: 0px 1px 1px 0px rgba(211, 211, 211, 0.75);
@@ -58,4 +75,12 @@ h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
     -webkit-box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, 0.75);
     -moz-box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, 0.75);
     box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, 0.75);
+}
+
+
+.adv {
+    position: absolute;
+    top: 30%;
+    /*left: 50%;*/
+    /*transform: translate(-50%,-50%);*/
 }

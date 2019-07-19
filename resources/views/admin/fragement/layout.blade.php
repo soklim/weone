@@ -9,7 +9,7 @@
 <body id="page-top">
 
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-    <a href="/admin-sv">
+    <a href="/">
         <img  src="/images/header/weone.png" style="width: 50px">
     </a>
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
@@ -21,8 +21,8 @@
                 <img height="30px" class="rounded-circle" src="{{Auth::user()->photo?Auth::user()->photo->file:'https://via.placeholder.com/400x400'}}" alt="">
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="/admin/profile">Profile</a>
-                <a class="dropdown-item" href="#">Activity Log</a>
+                {{--<a class="dropdown-item" href="/admin/profile">Profile</a>--}}
+                {{--<a class="dropdown-item" href="#">Activity Log</a>--}}
                 <a class="dropdown-item" href="/changepassword">Change Password</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal" href="{{ route('logout') }}" onclick="event.preventDefault();

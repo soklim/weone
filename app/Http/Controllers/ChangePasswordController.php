@@ -8,6 +8,7 @@ use App\Product;
 use Illuminate\Support\Facades\Input as input;
 use App\User;
 use App\Photo;
+use App\SysStatic;
 use Illuminate\Support\Facades\Session;
 
 class ChangePasswordController extends Controller
@@ -76,14 +77,14 @@ class ChangePasswordController extends Controller
     {
         //
         $users = User::findOrFail($id);
-        $pro_innis=Product::where('brand_id',1)->get();
-        $pro_laneige=Product::where('brand_id',2)->get();
-        $pro_iope=Product::where('brand_id',3)->get();
-        $pro_etude=Product::where('brand_id',4)->get();
-        $pro_other=Product::where('brand_id',5)->get();
+        $sys_s=SysStatic::where('id',2)->get();
+        $sys_logo=SysStatic::where('id',3)->get();
+        $sys_footerLeft=SysStatic::where('id',5)->get();
+        $sys_FirstOffer=SysStatic::where('id',9)->get();
+        $sys_SecondOffer=SysStatic::where('id',10)->get();
         $roles = Role::all();
 
-        return view('auth.changeprofile',compact('users','roles',"pro_innis","pro_laneige","pro_iope","pro_etude","pro_other"));
+        return view('auth.changeprofile',compact('users','roles',"sys_SecondOffer","sys_FirstOffer","sys_s","sys_logo","sys_footerLeft"));
     }
 
     /**
@@ -97,28 +98,24 @@ class ChangePasswordController extends Controller
     {
         //
         $user =User::findOrFail($id);
-
-
             $input =$request->all();
 
-
-
-        if($file = $request->file('photo_id'))
-        {
-            $name = time()  .$file->getClientOriginalName();
-
-            $file->move('images',$name);
-
-            $photo = Photo::create(['file'=>$name]);
-
-            $input['photo_id'] = $photo->id;
-
-        }
-
+//
+//        if($file = $request->file('photo_id'))
+//        {
+//            $name = time()  .$file->getClientOriginalName();
+//
+//            $file->move('images',$name);
+//
+//            $photo = Photo::create(['file'=>$name]);
+//
+//            $input['photo_id'] = $photo->id;
+//
+//        }
 
         $user->update($input);
 
-        return redirect('/admin/profile');
+        return redirect('/user-panel/{id}');
     }
 
     /**

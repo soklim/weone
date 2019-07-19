@@ -8,9 +8,9 @@
         <div class="row">
             @foreach($promotion_details as $detail)
             <div class="col-md-12" style="margin-top: 20px">
-                <h2 style="color: #ffa366;">{{$detail->promo_name}}</h2>
+                <h2 style="color: #3498db;">{{$detail->promo_name}}</h2>
                 <label>From Date:&nbsp;{{$detail->from_date}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To Date:&nbsp;{{$detail->to_date}}</label>
-                <hr style="background-color: #ffa366;">
+                <hr style="background-color: #3498db;">
             </div>
 
             @endforeach
