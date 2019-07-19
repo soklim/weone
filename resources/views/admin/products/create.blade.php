@@ -60,7 +60,7 @@
 
                 <div class="form-group">
                     {!! Form::label('desc','Description:') !!}
-                    {!! Form::textarea('desc',null,['class'=>'form-control','required','maxlength'=>'300']) !!}
+                    {!! Form::textarea('desc',null,['class'=>'form-control','required','maxlength'=>'2000']) !!}
                 </div>
 
                 <div class="form-group">

@@ -18,7 +18,8 @@ class Product extends Model
         'brand_id',
         'isPop',
         'photo_id',
-        'video'
+        'video',
+        'visitor'
 
     ];
 

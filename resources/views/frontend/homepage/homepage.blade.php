@@ -61,11 +61,14 @@
             </div>
         </div>
         <!---- Promotion End ---->
-<br>
+        <br>
 
 
         <div class="container">
+            <h2 style="color: #008000 ;">New Arrival</h2>
+            <hr style="background-color: #008000 ;">
             <div class="row">
+
                 @foreach($pro_popular1 as $prod)
                 <div class="col-md-3 col-sm-6 item-shadow-gray">
                     <div class="product-grid2">
@@ -117,6 +120,36 @@
                 @endforeach
             </div>
             <hr>
+        </div>
+
+        <div class="container">
+            <h2 style="color: #008000 ;">Popular Products</h2>
+            <hr style="background-color: #008000 ;">
+            <div class="row">
+
+                @foreach($topView as $prod)
+                    <div class="col-md-3 col-sm-6 item-shadow-gray">
+                        <div class="product-grid2">
+                            <div class="product-image2">
+
+                                <img class="pic-1" src="{{$prod->photo->file}}" class="img-fluid w-100" id="product1">
+                                <img class="pic-2" src="{{$prod->photo->file}}" class="img-fluid w-100" id="product2">
+
+                                <ul class="social">
+                                    <li><a href="{!! url('product-detail/'. $prod->id.'/'.$prod->category_id.'/'.$prod->brand_id) !!}" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                    {{--<li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>--}}
+                                    <li><a href="{{route('cart.edit',$prod->id)}}" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                                <a class="add-to-cart" href="{{route('cart.edit',$prod->id)}}">Add to cart</a>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title primary" ><a href="{!! url('product-detail/'. $prod->id.'/'.$prod->category_id.'/'.$prod->brand_id) !!}" >{{str_limit($prod->pro_name,30) }}</a></h3>
+                                <span class="price">${{$prod->prices}}</span>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </div>
 
 

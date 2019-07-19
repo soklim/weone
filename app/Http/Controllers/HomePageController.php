@@ -7,6 +7,7 @@ use App\SlideShow;
 use App\SysStatic;
 use Illuminate\Http\Request;
 use App\Promotion;
+use Illuminate\Support\Facades\DB;
 
 class HomePageController extends Controller
 {
@@ -22,6 +23,8 @@ class HomePageController extends Controller
         $pro_popular1=Product::where('isPop',1)->orderBy('created_at','desc')->limit(4)->offset(0)->get();
         $pro_popular2=Product::where('isPop',1)->orderBy('created_at','desc')->limit(4)->offset(4)->get();
 
+        $topView = Product::orderBy('visitor','desc')->limit(8)->offset(0)->get();
+
         $sys_s=SysStatic::where('id',2)->get();
         $sys_logo=SysStatic::where('id',3)->get();
         $sys_footerLeft=SysStatic::where('id',5)->get();
@@ -31,13 +34,15 @@ class HomePageController extends Controller
         $sys_FirstOffer=SysStatic::where('id',9)->get();
         $sys_SecondOffer=SysStatic::where('id',10)->get();
 
-        $promotion=Promotion::where('order',1)->orderBy('id','DESC')->get()->take(3);
+        $results = DB::select('CALL offer_expired');
+        $promotion=Promotion::where('expired',1)->where('order',1)->orderBy('id','desc')->get()->take(3);
+//        $promotion=Promotion::where('order',1)->orderBy('id','DESC')->get()->take(3);
         $slide1=SlideShow::where('id',1)->get();
         $slide2=SlideShow::where('id',2)->get();
         $slide3=SlideShow::where('id',3)->get();
 
 
-        return view("frontend.homepage.homepage",compact('pro_popular2',"sys_SecondOffer","sys_FirstOffer","slide1","slide2","slide3","promotion","pro","sys_s","pro_popular1","sys_logo","sys_footerLeft","sys_mainLeft","sys_mainCenter","sys_mainRight"));
+        return view("frontend.homepage.homepage",compact('topView','pro_popular2',"sys_SecondOffer","sys_FirstOffer","slide1","slide2","slide3","promotion","pro","sys_s","pro_popular1","sys_logo","sys_footerLeft","sys_mainLeft","sys_mainCenter","sys_mainRight"));
     }
 
     /**

@@ -7,8 +7,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12" style="margin-top: 20px">
-                <h2 style="color: #79bb2a;">Product Detail</h2>
-                <hr style="background-color: #79bb2a;">
+                @foreach($pro_details as $detail)
+                <h2 style="color: #008000 ;">{{$detail->pro_name}}</h2>
+                @endforeach
+                <hr style="background-color: #008000;">
 
             </div>
         </div>
@@ -51,10 +53,10 @@
             <div class="col-md-7 col-sm-12">
                 @foreach($pro_details as $detail)
                     <article class="card-body" style="margin-top: -10px;">
-                        <h3 class="title mb-3">{{$detail->pro_name}}</h3>
+                        {{--<h3 class="title mb-3">{{$detail->pro_name}}</h3>--}}
 
                         <p class="price-detail-wrap" style="color: red !important;font-weight: bold;">
-                            <span class="price h3 text-warning">
+                            <span class="price h3 text-primary">
                                 <span class="currency">Price: </span><span class="num">{{$detail->prices}}$</span>
                         {{--<p><a href="#" style="color: red !important;font-weight: bold;">{{ $detail->prices }}$</a></p>--}}
                         </span>
@@ -77,7 +79,7 @@
                         @endforeach
                         <dl class="item-property">
                             <dt>Description</dt>
-                            <textarea class="form-control" readonly style="font-family: 'Khmer OS Battambang', sans-serif">{{$detail->desc}}</textarea>
+                            <textarea class="form-control" readonly style="font-family: 'Khmer OS Battambang', sans-serif" rows='5'>{{$detail->desc}}</textarea>
                             {{--<dd><p >{{$detail->desc}}</p></dd>--}}
                         </dl>
 

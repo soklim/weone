@@ -13,12 +13,15 @@ use App\User;
 use App\Photo;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 
 class ProductDetailController extends Controller
 {
     public function showProduct($id,$category_id,$brand_id)
     {
 //
+        DB::select(DB::raw("CALL UpdateVisitor($id)"));
+
         $pro_details=Product::where('id',$id)->get();
         $thumbnail = Thumbnail::where('item_id',$id)->get();
         $category=Category::where('id',$category_id)->get();
